@@ -1,3 +1,8 @@
+<?php 
+
+get_header();
+
+?>
 <div class="all_content">
 
 <?php 
