@@ -17,6 +17,8 @@ get_header();
     echo "No hay posts";
   }
 
+  get_sidebar();
+
 ?>
 
 </div>
