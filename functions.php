@@ -5,7 +5,7 @@ function thelepathe_register_sidebar( ){
     "id" => "my_sidebar",
     "name" => "My Sidebar",
     "description" => "El sidebar de telepathe",
-    "class" => "my_sidebar_class"   
+    "class" => "my_sidebar_class"
    ) );
 }
 

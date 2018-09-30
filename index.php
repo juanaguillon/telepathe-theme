@@ -16,8 +16,8 @@ get_header();
   }else{
     echo "No hay posts";
   }
-
   get_sidebar();
+  
 
 ?>
 
