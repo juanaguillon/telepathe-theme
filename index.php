@@ -8,9 +8,11 @@ get_header();
 <?php 
 
   if ( have_posts( ) ){
-    if( is_home() && ! is_front_page() ){
+    if( is_home() ){
       while ( have_posts( ) ){
         the_post( );
+
+        get_template_part('content');
       }
     }
   }else{
