@@ -10,11 +10,31 @@
 					</a>
 				</div>
 			<?php
-			the_post_thumbnail();
-		}else{
-			echo '<h1>Np hay imagen</h1>';
 		}
 
 		?>
-	</div>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+
+		<?php 
+
+		if ( comments_open() ){
+			?> 
+			<div class="comment_poup">
+				<?php comments_popup_link();?>
+			</div>
+			<?php
+		}
+
+		if ( current_user_can( 'edit_posts' ) ){
+			?> 
+			<div class="edit_this_post">
+				<?php edit_post_link( 'Editar este Post'); ?>
+			</div>
+			<?php
+		}else{
+			echo '<h1>No eres admin</h1>';
+		}
+
+		 ?>
+	</div> <!-- div.phpid -->
 </div>
