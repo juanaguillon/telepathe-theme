@@ -6,3 +6,7 @@ Licence: GNU
 Tags: Brillate, dos columnas, una columna, sidebar, responsive.
 Description: El mejor tema para wordpress.
 */
+
+body{
+	margin:0;
+}
