@@ -5,7 +5,9 @@
 
 		if ( have_posts() ){
 			while ( have_posts()) {
-			    the_post();		
+			    the_post();	
+
+			    the_content();	
 
 			    if ( has_category() || has_tag() ){
 			    	?> 
@@ -35,9 +37,19 @@
 			    	<?php
 			    }			
 
+			    if ( comments_open() || get_comments_number(  ) ){
+			    	comments_template();
+			    }
+
+			    the_post_navigation( array(
+			    	"prev_text" => "<span>Anterior Publicacion: Aqui!</span>",
+			    	"next_text" => "<span>Siguiente publicacion: Aqui!</span>"
+			    ));	
+
+
 			    
-		}	
-	}
+		}	/*Final del while*/
+	} /*Final del if*/
 
 		?>
 	</main>		
