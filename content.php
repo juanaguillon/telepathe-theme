@@ -31,8 +31,6 @@
 				<?php edit_post_link( 'Editar este Post'); ?>
 			</div>
 			<?php
-		}else{
-			echo '<h1>No eres admin</h1>';
 		}
 
 		 ?>

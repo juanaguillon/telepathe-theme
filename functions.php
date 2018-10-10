@@ -1,6 +1,6 @@
 <?php 
 
-function thelepathe_register_sidebar( ){
+function telepathe_register_sidebar( ){
   register_sidebar( array( 
     "id" => "my_sidebar",
     "name" => "My Sidebar",
@@ -17,5 +17,5 @@ function telepathe_supports_theme( ){
 }
 
 add_action('after_setup_theme','telepathe_supports_theme');
-add_action('widgets_init','thelepathe_register_sidebar');
+add_action('widgets_init','telepathe_register_sidebar');
 
