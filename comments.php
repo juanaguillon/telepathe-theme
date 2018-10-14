@@ -29,9 +29,31 @@ if ( post_password_required() ){
 				"short_ping" => true,
 				"avatar_size" => 65
 			));
-
 			 ?>
 		</ul>
+
+		<div class="comments_pagination">
+			<?php 
+
+			the_comments_pagination( array(
+				"prev_text" => "Anterio Pagina",
+				"next_text" => "Siguioente Pagina",
+				"before_page_number" => "<span class='link_pageniation_comment'>",
+				"after_page_number" => "</span>",
+				"screen_reader_text" => "Paginacion de Comentarios"
+			) );
+
+			 ?>
+		</div>
+
+
 		<?php
+
+		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type() , 'comments') ){
+			echo '<p>No se adminten comentarios</p>';
+
+		}
+		comment_form();
+
 	} /* Finalización de verificación para comentarios*/ ?>
 </div>

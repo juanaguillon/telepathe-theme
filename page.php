@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <div class="page_post" id="page_post_id">
 	<main>
 		<?php 
@@ -48,3 +49,4 @@
 		 	 ?>
 	</main>
 </div>
+<?php get_footer(); ?>
