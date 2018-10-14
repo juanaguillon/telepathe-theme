@@ -20,6 +20,18 @@ if ( post_password_required() ){
 
 			 ?>
 		</h3>
+
+		<ul class="comments_list">
+			<?php 
+
+			wp_list_comments( array(
+				"style" => "ul",
+				"short_ping" => true,
+				"avatar_size" => 65
+			));
+
+			 ?>
+		</ul>
 		<?php
-	} ?>
+	} /* Finalización de verificación para comentarios*/ ?>
 </div>
