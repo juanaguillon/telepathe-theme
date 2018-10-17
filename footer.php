@@ -12,4 +12,6 @@
 <h3>Estamos en el footer</h3>
 </div>
 
+<?php wp_footer(); ?>
+
 </footer>
