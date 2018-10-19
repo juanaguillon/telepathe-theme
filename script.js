@@ -1,0 +1,1 @@
+alert('Hola, estamos en el script');
