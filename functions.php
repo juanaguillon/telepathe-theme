@@ -9,10 +9,25 @@ function telepathe_register_sidebar( ){
    ) );
 }
 
+function telepathe_nav_menus(){
+
+	register_nav_menus( array(
+		'primary_menu' => "Menu Primario",
+		'secondary_menu' => "Menu Secundario"
+	));
+
+}
+
 function telepathe_supports_theme( ){
 
 	add_theme_support('html5');
 	add_theme_support('post-thumbnails');
+
+}
+
+function telepathe_setup( ){
+	telepathe_supports_theme( );
+	telepathe_nav_menus();
 
 }
 
@@ -25,6 +40,6 @@ function telepathe_linked_scripts(){
 
 add_action('admin_enqueue_scripts', 'telepathe_linked_scripts');
 
-add_action('after_setup_theme','telepathe_supports_theme');
+add_action('after_setup_theme','telepathe_setup');
 add_action('widgets_init','telepathe_register_sidebar');
 

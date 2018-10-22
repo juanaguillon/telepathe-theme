@@ -1,1 +1,1 @@
-alert('Hola, estamos en el script');
+// alert('Hola, estamos en el script');
