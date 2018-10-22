@@ -28,6 +28,19 @@
 	<header>
 		<nav>
 			<a href="<?php echo esc_url( home_url('/') ) ?>" title="<?php bloginfo('desription'); ?>"><h3><?php bloginfo('name'); ?></h3></a>
+      <?php 
+
+      if ( has_nav_menu( 'primary_menu' ) ){
+
+        wp_nav_menu( array(
+          "theme_location" => "primary_menu",
+          "menu_class" => "primary_menu_class",
+          "container_class" => "primary_menu_contariner_class"
+        ) );
+
+      }
+
+       ?>
 		</nav>
 	</header><!-- /header -->
 </body>
