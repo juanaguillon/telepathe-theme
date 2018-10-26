@@ -18,6 +18,11 @@ function telepathe_nav_menus(){
 
 }
 
+function telepathe_include(){
+	require 'custom/sections.php';
+	require 'custom/settings.php';
+	require 'custom/controlls.php';
+}
 function telepathe_supports_theme( ){
 
 	add_theme_support('html5');
@@ -28,6 +33,7 @@ function telepathe_supports_theme( ){
 function telepathe_setup( ){
 	telepathe_supports_theme( );
 	telepathe_nav_menus();
+	telepathe_include();
 
 }
 
