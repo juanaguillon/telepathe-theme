@@ -15,7 +15,7 @@
   		margin-top: 40px;
   	}
   	header{
-  		background: red;
+  		background: <?php echo get_theme_mod('telepathe_colors') ?> ;
   	}
   </style>
   <?php 

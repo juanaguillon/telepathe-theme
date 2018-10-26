@@ -3,7 +3,7 @@
 <?php wp_footer(); ?>
 <style>
 .footer_all{
-  background:red;
+  background: <?php echo get_theme_mod('telepathe_colors') ?> ;
   padding:5px;
 }
 </style>

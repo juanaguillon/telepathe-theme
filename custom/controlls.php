@@ -7,7 +7,7 @@ function telepathe_register_controlls( $wp_customize ){
     new WP_Customize_Color_Control( $wp_customize, 'telepathe_colors', array(
       "label" => "Color Header/Footer",
       "description" => "Selecciona el color de el Header y el Footer",
-      "section" => 'colors'
+      "section" => 'telepathe_mysection'
     ) )
   );
   
