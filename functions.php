@@ -44,8 +44,12 @@ function telepathe_linked_scripts(){
 	wp_enqueue_script( 'script' );
 }
 
-add_action('admin_enqueue_scripts', 'telepathe_linked_scripts');
+function telepathe_customize_live(){
+	wp_enqueue_script('telepathe_customzize_live', get_template_directory_uri() . '/custom/theme-customize.js', array('jquery') , '1.0', true);
+}
 
+add_action('admin_enqueue_scripts', 'telepathe_linked_scripts');
+add_action('customize_preview_init','telepathe_customize_live');
 add_action('after_setup_theme','telepathe_setup');
 add_action('widgets_init','telepathe_register_sidebar');
 
