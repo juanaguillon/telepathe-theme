@@ -12,7 +12,7 @@
 
 if ( isset($_POST['send_form_telepathe'])){
   $checking = $_POST['telepathe_checking_sidebar'];
-  add_option( "telepathe_exists_sidebar", $checking );
+  update_option( "telepathe_exists_sidebar", $checking );
 }
 
-?>
+
