@@ -22,6 +22,7 @@ function telepathe_include(){
 	require 'custom/sections.php';
 	require 'custom/settings.php';
 	require 'custom/controlls.php';
+	require 'inc/menu.php';
 }
 function telepathe_supports_theme( ){
 
