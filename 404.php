@@ -7,13 +7,8 @@
 		<h3>También puedes mirar nuestras categorías</h3>
 		<?php wp_list_categories(); ?>
 		<h3>Tambien mirar nuestas etiquetas</h3>
-		<?php 
-
-			$tags = get_tags();
-			$html = '<div class="post_tags">';
-			foreach ( $tags as $tag ) {
-			    $tag_link = get_tag_link( $tag->term_id );
-			             
+		NO ENCONTRADO
+		<?php
 			    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
 			    $html .= "{$tag->name}</a>";
 			}
