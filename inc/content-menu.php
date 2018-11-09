@@ -4,6 +4,14 @@
       <form action="#" method="post">
         <label for="telepathe_check_sidebar">¿Mostrar Sidebar?</label>
         <input type="checkbox" name="telepathe_checking_sidebar" id="telepathe_check_sidebar">
+        <?php 
+        
+        if( get_option('telepathe_exists_sidebar') == 'on'){
+          echo '<p>Actualmente está activo</p>';
+        }else{
+          echo '<p>No está activo actualmente</p>';
+        }
+        ?>
         <input name="send_form_telepathe" type="submit" value="Enviar" class="button">
       </form>
     </div>

@@ -18,7 +18,14 @@ get_header();
   }else{
     echo "No hay posts";
   }
-  get_sidebar();
+
+  $exists_sidebar = get_option('telepathe_exists_sidebar', false );
+
+  if( $exists_sidebar == 'on' ){
+
+    get_sidebar();
+  }
+  
   
 
 ?>
