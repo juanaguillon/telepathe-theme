@@ -14,6 +14,9 @@
         ?>
         <input name="send_form_telepathe" type="submit" value="Enviar" class="button">
       </form>
+      <form method="post" >
+      <input type="submit" name="delete" class="button" value="Eliminar Opción">
+      </form>
     </div>
   <?php
 } 
@@ -21,6 +24,10 @@
 if ( isset($_POST['send_form_telepathe'])){
   $checking = $_POST['telepathe_checking_sidebar'];
   update_option( "telepathe_exists_sidebar", $checking );
+}
+
+if( isset( $_POST['delete'] ) ){
+  delete_option('telepathe_exists_sidebar');
 }
 
 
