@@ -28,6 +28,7 @@ function telepathe_supports_theme( ){
 
 	add_theme_support('html5');
 	add_theme_support('post-thumbnails');
+	add_theme_support("woocommerce");
 
 }
 

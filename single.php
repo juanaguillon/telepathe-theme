@@ -7,7 +7,7 @@
 			while ( have_posts()) {
 			    the_post();	
 
-			    the_content();	
+					the_content();	
 
 			    if ( has_category() || has_tag() ){
 			    	?> 
