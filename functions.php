@@ -50,8 +50,14 @@ function telepathe_customize_live(){
 	wp_enqueue_script('telepathe_customzize_live', get_template_directory_uri() . '/custom/theme-customize.js', array('jquery') , '1.0', true);
 }
 
+
+function woo_desc(){
+	the_excerpt();
+}
+
 add_action('admin_enqueue_scripts', 'telepathe_linked_scripts');
 add_action('customize_preview_init','telepathe_customize_live');
 add_action('after_setup_theme','telepathe_setup');
 add_action('widgets_init','telepathe_register_sidebar');
+add_action('woocommerce_after_shop_loop_item_title', "woo_desc");
 
