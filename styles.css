@@ -1,3 +1,68 @@
-body{
-	background: lightgray;
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+*{
+	box-sizing: border-box;
+}
+
+.images_for_test{
+	width: 49%;
+	max-width: 700px;
+}
+
+.images_for_test img{
+	width:100%;
+	height: auto;
+	min-height: 185px;
+  max-height: 185px;
+	box-shadow: 0 0 2px rgb(0, 179, 9);
+}
+
+.primary_image img{
+	max-height: inherit;
+
+}
+
+
+.parent_images{
+	
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	height: auto;
+	
+	padding: 10px;
+	overflow: hidden;
+}
+
+.primary_image{
+	margin-bottom: 1em;
+	width: 100%;
+	max-height: inherit;
+	vertical-align: initial;
+}
+
+.information_post{
+	padding: 3em 1em;
+	border-bottom: 1px solid rgb(199, 199, 199);
+	border-top: 1px solid rgb(207, 207, 207);
+	margin:1em 0;
+}
+
+.information_post *{
+	display: inline-block;
+	vertical-align: top;	
+}
+
+.information_post h2.post_title{
+	display: block;
+	text-align: center;
+	color:rgb(0, 179, 9);
+	font-size: 37px;
+}
+
+.information_post p{
+	width: 49%;
+	max-width: 700%;
+	padding:3em 5em;
+	font-size: 20px;
 }

@@ -5,12 +5,37 @@
 
 		if ( have_posts() ){
 			while ( have_posts()) {
-			    the_post();	
+					the_post();	
+					?>
+					<div class="information_post">
+						<h2 class="post_title"><?php the_title(); ?></h2>				
+						<div class="images_for_test">
+						<?php 
+						
+							if ( class_exists('acf') ){
+								$galeria = get_field('galeria');
+								$size = "full";
+								$images = "";
+								$type = 0;
+								foreach( $galeria as $image_arr ){
+									$class = $type < 1 ? " primary_image" : "";
+									$images .= "<div class='parent_images$class'>" .  wp_get_attachment_image( $image_arr["id"] , $size) ."</div>";
+									$type++;
+								}
 
-					the_content();	
+								echo $images;
+								
+							}
+						
+						?>		
 
-			    if ( has_category() || has_tag() ){
-			    	?> 
+						</div>
+					<?php	the_content();	?>
+
+					</div>
+
+					<?php if ( has_category() || has_tag() ){	?> 
+
 			    	<div class="cat_and_tag">
 			    		<?php 
 

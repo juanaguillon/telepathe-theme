@@ -9,7 +9,7 @@
 </style>
 <div class="footer_all">
 
-<h3>Estamos en el footer</h3>
+<h3><?php _e("Estamos en el footer","telepathe"); ?></h3>
 </div>
 
 <?php wp_footer(); ?>

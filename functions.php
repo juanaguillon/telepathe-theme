@@ -55,7 +55,7 @@ function woo_desc(){
 	the_excerpt();
 }
 
-add_action('admin_enqueue_scripts', 'telepathe_linked_scripts');
+add_action('wp_enqueue_scripts', 'telepathe_linked_scripts');
 add_action('customize_preview_init','telepathe_customize_live');
 add_action('after_setup_theme','telepathe_setup');
 add_action('widgets_init','telepathe_register_sidebar');
